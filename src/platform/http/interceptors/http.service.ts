@@ -52,7 +52,9 @@ export class TdHttpService extends HttpClient {
       body?: any;
       headers?: HttpHeaders | { [header: string]: string | string[] };
       observe?: 'body' | 'events' | 'response';
-      params?: HttpParams | { [param: string]: string | string[] };
+      params?: HttpParams | {
+        [param: string]: string | number | boolean | ReadonlyArray<string | number | boolean>;
+      };
       reportProgress?: boolean;
       responseType?: 'arraybuffer' | 'blob' | 'json' | 'text';
       withCredentials?: boolean;

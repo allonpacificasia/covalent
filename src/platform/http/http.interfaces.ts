@@ -17,6 +17,9 @@ export interface ITdHttpRESTOptions {
     | HttpParams
     | {
         [param: string]: string | string[];
+      }
+    | {
+      [param: string]: string | number | boolean | ReadonlyArray<string | number | boolean>;
       };
   responseType?: TdHttpRESTResponseType;
   reportProgress?: boolean;

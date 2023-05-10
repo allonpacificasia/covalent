@@ -117,12 +117,12 @@ export class TdFileDropDirective extends _TdFileDropMixinBase implements ICanDis
   /**
    * Validates if the transfer item types are 'Files'.
    */
-  private _typeCheck(types: ReadonlyArray<string> | DOMStringList): string {
-    let dropEffect: string = 'none';
+  private _typeCheck(types: ReadonlyArray<string> | DOMStringList): "none" | "copy" | "link" | "move" {
+    let dropEffect: "none" | "copy" | "link" | "move" = 'none';
     if (
       types &&
-      (((<any>types).contains && (<any>types).contains('Files')) ||
-        ((<any>types).indexOf && (<any>types).indexOf('Files') !== -1))
+      (((types as any).contains && (types as any).contains('Files')) ||
+        ((types as any).indexOf && (types as any).indexOf('Files') !== -1))
     ) {
       dropEffect = 'copy';
     }

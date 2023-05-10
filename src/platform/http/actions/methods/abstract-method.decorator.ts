@@ -14,7 +14,9 @@ export const NOOP_HTTP: Observable<any> = of(undefined);
  * into a centrilized HttpParams object
  * @internal
  */
-export function parseParams(target: HttpParams, source: HttpParams | { [key: string]: string | string[] }): HttpParams {
+export function parseParams(target: HttpParams, source: HttpParams | { [key: string]: string | string[] }| {
+  [param: string]: string | number | boolean | ReadonlyArray<string | number | boolean>;
+  }): HttpParams {
   let queryParams: HttpParams = target;
   if (source instanceof HttpParams) {
     source.keys().forEach((key: string) => {
