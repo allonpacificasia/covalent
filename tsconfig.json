@@ -24,7 +24,8 @@
       "@covalent/code-editor": ["./platform/code-editor"],
       "@covalent/text-editor/*": ["./platform/text-editor/*"],
       "@covalent/echarts/*": ["./platform/echarts/*"],
-      "@covalent/markdown-navigator": ["./platform/markdown-navigator"]
+      "@covalent/markdown-navigator": ["./platform/markdown-navigator"],
+      "@schematics/angular/*": ["node_modules/@schematics/angular/*"]
     },
     "noUnusedParameters": false,
     "noUnusedLocals": false,
