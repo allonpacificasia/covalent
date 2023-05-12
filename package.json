@@ -118,6 +118,7 @@
     "gulp-hub": "4.2.0",
     "gulp-postcss": "8.0.0",
     "gulp-sass": "4.0.2",
+    "gulp-cli": "^2.2.0",
     "gulp-sourcemaps": "2.6.5",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
